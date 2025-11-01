@@ -1,0 +1,23 @@
+add_executable(
+    image_processor
+    image_processor.cpp
+    fabrics/base_fabric.cpp
+    fabrics/crop_fabric.cpp
+    fabrics/sharpening_fabric.cpp
+    fabrics/gray_scale_fabric.cpp
+    fabrics/negative_fabric.cpp
+    fabrics/edge_fabric.cpp
+    filters/base_filter.cpp
+    filters/crop.cpp
+    filters/sharpening.cpp
+    filters/gray_scale.cpp
+    filters/negative.cpp
+    filters/edge.cpp
+    bmp.cpp
+    controller.cpp
+    exceptions.cpp
+    image_processor.cpp
+    image.cpp
+    io.cpp
+    parser.cpp
+)

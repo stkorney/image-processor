@@ -5,7 +5,7 @@
 #include <string>
 
 std::shared_ptr<BaseFilter> CropFabric::Create(const std::vector<std::string>& input_params) {
-    if (input_params.size() != 2)  {
+    if (input_params.size() != 2) {
         throw FilterException("'Crop' expects 2 parameters.");
     }
 
@@ -13,7 +13,7 @@ std::shared_ptr<BaseFilter> CropFabric::Create(const std::vector<std::string>& i
 
     try {
         width = static_cast<size_t>(std::stoul(input_params[0]));
-    } catch(...) {
+    } catch (...) {
         throw FilterException("Invalid width argument.");
     }
 
@@ -21,7 +21,7 @@ std::shared_ptr<BaseFilter> CropFabric::Create(const std::vector<std::string>& i
 
     try {
         height = static_cast<size_t>(std::stoul(input_params[1]));
-    } catch(...) {
+    } catch (...) {
         throw FilterException("Invalid height argument for 'Crop'.");
     }
 

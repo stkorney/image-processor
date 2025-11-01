@@ -1,5 +1,6 @@
 #include "crop.h"
 
+#include <cstddef>
 
 void Crop::Apply(Image& image) {
     size_t crop_height = std::min(image.pixels.size(), height_);
@@ -7,7 +8,8 @@ void Crop::Apply(Image& image) {
     std::vector<std::vector<Pixel>> croped_image;
 
     for (size_t i = 0; i < crop_height; ++i) {
-        std::vector<Pixel> row(image.pixels[i].begin(), image.pixels[i].begin() + crop_width);
+        std::vector<Pixel> row(image.pixels[i].begin(),
+                               image.pixels[i].begin() + static_cast<std::ptrdiff_t>(crop_width));
         croped_image.push_back(row);
     }
     image.pixels = croped_image;

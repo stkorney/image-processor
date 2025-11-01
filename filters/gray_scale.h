@@ -4,7 +4,7 @@
 
 #include <cstdint>
 
-class GrayScale : public BaseFilter {
+class GrayScale : virtual public BaseFilter {
 public:
     GrayScale() = default;
     void Apply(Image& image) override;

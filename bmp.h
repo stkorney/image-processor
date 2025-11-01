@@ -31,9 +31,9 @@ struct BMPFile {
     ImageHeader image_header_;
     Image image_;
 
-    BMPFile (BMPHeader header, ImageHeader image_header, Image image)
-        : header_(header), image_header_(image_header), image_(image)
-    {}
+    BMPFile(BMPHeader header, ImageHeader image_header, Image image)
+        : header_(header), image_header_(image_header), image_(image) {
+    }
 };
 
 BMPFile BMPRead(const std::string& in_path);

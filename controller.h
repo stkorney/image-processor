@@ -6,6 +6,7 @@
 #include "fabrics/gray_scale_fabric.h"
 #include "fabrics/negative_fabric.h"
 #include "fabrics/edge_fabric.h"
+#include "fabrics/temp_point_fabric.h"
 #include "filters/base_filter.h"
 #include "parser.h"
 #include "image.h"
@@ -14,7 +15,7 @@
 #include <unordered_map>
 #include <vector>
 
-extern const std::unordered_map<std::string, std::shared_ptr<BaseFabric>> fabrics;
+extern const std::unordered_map<std::string, std::shared_ptr<BaseFabric>> FABRICS;
 
 std::vector<std::shared_ptr<BaseFilter>> CreateFilters(const std::vector<InputFilter>& input_filters);
 
